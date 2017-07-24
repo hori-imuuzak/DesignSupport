@@ -15,17 +15,18 @@ export default class SpacingTest extends Component {
   renderSpace(size) {
     return (
       <View
+        key={`space${size}`}
         style={{
           flex: 1,
         }}
       >
-        <Text>{`size = ${size}`}</Text>
+        <Text>{`height = ${size}`}</Text>
         <View
-          key={`space${size}`}
           style={{
             flex: 1,
             height: size,
             borderColor: 'black',
+            borderWidth: StyleSheet.hairlineWidth,
             backgroundColor: 'grey',
           }}
         />
